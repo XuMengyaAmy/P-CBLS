@@ -290,7 +290,7 @@ if __name__ == '__main__':
     print(data['best_cider'])
 
 
-# CUDA_VISIBLE_DEVICES=1 python3.8 train_CBLS.py --features_path /media/mmlab/data_2/mengya/instruments18_caption/ --annotation_folder annotations_new/annotations_miccai_inc_sup_cbs
+
 
 
 

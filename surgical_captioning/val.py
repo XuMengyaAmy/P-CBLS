@@ -1,8 +1,4 @@
-'''
-Paper: Incremental Domain Adaptation with Smoothing and Calibration for Surgical Report Generation
-Authors: Mengya Xu, Mobarakol Islam
-Date: 03/03/2020
-'''
+
 import random
 from data import ImageDetectionsField, TextField, RawField
 from data import COCO, DataLoader
@@ -139,17 +135,9 @@ if __name__ == '__main__':
 
 
     # Baseline
-    # data = torch.load('/media/mmlab/data_2/mengya/Code/ImageCaption/IDA_SurgicalReport/saved_models/baseline/m2_transformer_best.pth')
+    data = torch.load('/media/mmlab/data_2/Code/m2_transformer_best.pth')
     
-    # LS
-    data = torch.load('/media/mmlab/data_2/mengya/Code/ImageCaption/IDA_SurgicalReport/saved_models/CBLS/cbls_ls_0.1/m2_transformer_best.pth')
 
-    
-    # CBLS
-    # data = torch.load('/media/mmlab/data_2/mengya/Code/ImageCaption/IDA_SurgicalReport/saved_models/CBLS/cbls_ls_0.1_factor_0.95/m2_transformer_best.pth')
-    
-    # PCBLS
-    # data = torch.load('/media/mmlab/data_2/mengya/Code/ImageCaption/IDA_SurgicalReport/saved_models/CBLS_linearMPL/CBLS_ls0.10_factor0.95_linearMPL_initsample0.90_eporatio0.40_epopace01/m2_transformer_best.pth')
     
     model.load_state_dict(data['state_dict'])
     print("Epoch %d" % data['epoch'])  
@@ -158,10 +146,3 @@ if __name__ == '__main__':
     dict_dataloader_val = DataLoader(dict_dataset_val, batch_size=args.batch_size)
     scores = evaluate_metrics(model, dict_dataloader_val, text_field)  
     print("Validation scores :", scores)
-
-
-
-
-
-
-# CUDA_VISIBLE_DEVICES=1 python3.8 val.py --features_path /media/mmlab/data_2/mengya/instruments18_caption/ --annotation_folder annotations_new/annotations_miccai_inc_sup_cbs --features_path_DA /media/mmlab/data_2/mengya/DomainAdaptation --annotation_folder_DA annotations_new/annotations_sgh_inc_sup_cbs

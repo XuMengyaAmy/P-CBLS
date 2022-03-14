@@ -215,7 +215,6 @@ class TextField(RawField):
         # print(counter) # count the word frequency of train and val dataset
         self.vocab = self.vocab_cls(counter, specials=specials, **kwargs)
 
-    # by mengya
     def word_frequency(self, *args):
         counter = Counter()
         sources = []

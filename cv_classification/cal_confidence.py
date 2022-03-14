@@ -202,14 +202,12 @@ def calculate_confidence_score(args, model, train_loader, temp):
             output = model(data)
             
             # =========== added for temperature scaling ========== #
-            # Code Reference: https://colab.research.google.com/drive/1f-cCXQbV0unhCy_bbRCYVS0wVb8Mbt4w?usp=sharing
             output = output / temp # after temperature-scaling  #################
             logits_list.append(output)
             labels_list.append(target)
             # ===================================================== #
 
             # ================ calculate the confidence score  =================== #
-            # Code Reference: https://github.com/mobarakol/CBLS/blob/main/CBLS.ipynb
             outputs_softmax = F.softmax(output, dim=1)
             for idx in range(len(target)):
                 true_class_wise_conf.append(outputs_softmax[idx,target[idx].item()].cpu().numpy())
@@ -254,7 +252,7 @@ def main():
     parser.add_argument('--cbls_start', default=5, type=int)
     parser.add_argument('--cbls_epoch', default=5, type=int)
     
-    parser.add_argument('--save_model_path', default=None, type=str) # '/home/ren2/data2/mengya/mengya_code/CBLS/CBLS_REBUTTAL/ckpt_resnet50/best_model_CE.pth.tar'
+    parser.add_argument('--save_model_path', default=None, type=str)
     parser.add_argument('--temp', default=None, type=float) # 1.45 for resnet50, 1.44 for densenet121
     parser.add_argument('--output_file', default=None, type=str) # 'data/tinyimagenet_resnet50_data_index_score_list.json'
     

@@ -328,9 +328,6 @@ def get_threshold(teacher_model, dataloaders, args):
     mu_update = mu / (args.n_epochs * args.E_all)
     return mu, mu_update
 
-
-
-# https://github.com/mobarakol/CBLS/blob/main/temperature_scaling_segmentation.ipynb
 def train_pixel_wise_curriculum(args, model, teacher_model, criterion, train_loader, valid_loader, validation, num_classes, optimizer):
     seed_everything(1234)
     valid_criterion = CELoss(num_classes = num_classes)
@@ -471,7 +468,7 @@ def train_pixel_wise_curriculum(args, model, teacher_model, criterion, train_loa
             # weights = get_curriculum_weights_per_px(args.num_classes, teacher_outputs, targets, args.mu, args.opt_t)
             # print('weights[0] shape', weights[0].shape) # shape torch.Size([1, 512, 640])
             # # label
-            # image = Image.open('/media/mmlab/data/mengya/SurgerySegmentaion/sgmt2018/predictions/train_RGB/seq_1_frame000.png')
+            # image = Image.open('/media/mmlab/data/SurgerySegmentaion/sgmt2018/predictions/train_RGB/seq_1_frame000.png')
 
             # new_size = (640, 512)
             # image = image.resize(new_size)

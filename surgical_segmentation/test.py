@@ -378,7 +378,7 @@ def main():
 
     arg('--model', type=str, default='LinkNet34', choices=moddel_list.keys()) # UNet:batch-size is 16. LinkNet34: batch-size is 32
     arg('--method', type=str, default='baseline', choices=['baseline', 'cbls', 'cbsvls', 'p-cbls', 'p-cbsvls'])
-    arg('--model_path', type=str, default='/media/mmlab/data/mengya/SurgerySegmentaion/Segmentation_robustness/saved_best_model_segmentation/LinkNet34/Baseline/best_model.pt')
+    arg('--model_path', type=str, default='/media/mmlab/data/SurgerySegmentaion/Segmentation_robustness/saved_best_model_segmentation/LinkNet34/Baseline/best_model.pt')
 
     args = parser.parse_args()
     print(args)
@@ -461,7 +461,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
-
-    # /media/mmlab/data/mengya/SurgerySegmentaion/sgmt2018/saved_model_lr_1e-4/LinkNet34/mixture/ls_0.09_factor_0.50_sig_0.90_sigfactor_0.50_ksize_3_lamda_0.80_Eall_0.40/detail_best_model.pt

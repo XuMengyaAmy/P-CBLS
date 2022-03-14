@@ -362,7 +362,6 @@ def main():
 
 
     valid_loader = make_loader(val_file_names, transform=val_transform(p=1), problem_type=args.type, batch_size=args.batch_size) 
-    print('mobarak',len(valid_loader.dataset))
     # ============= Check the validation performance on valid_loader ================= #
     valid_criterion = CELoss(num_classes = num_classes)
     valid_metrics = validation_multi(args, model, valid_criterion, valid_loader, num_classes) 

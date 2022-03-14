@@ -482,7 +482,7 @@ def main():
 # =========================================================
 
 
-# save_model_path: /home/ren2/data2/mengya/mengya_code/CBLS/CBLS_REBUTTAL/ckpt/best_model_CE.pth.tar
+# save_model_path: 
 # =========================================================
 # Before TS- acc:63.5300, ece(before ts):0.12428
 # =========================================================
