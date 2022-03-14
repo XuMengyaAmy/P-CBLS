@@ -5,8 +5,10 @@ We evaluate our CBLS and P-CBLS on three common computer vision classification d
 Here, we take the training commands on Tiny-ImageNet as the example to demonstrate the usage of our approaches.
 
 ## Command to train models with CBLS approach on  Tiny-ImageNet:
+```
+cd cv_classification
+```
 Our CBLS:
-
 ```
 python main.py --mode CBLS --ls_factor 0.38 --use_cls --cls_decay 0.5 --num_epochs 200 --dataset tinyimagenet
 ```
