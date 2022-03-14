@@ -1,7 +1,7 @@
 
 """
 Paper: Confidence-Aware Paced-Curriculum Learning by Label Smoothing
-Date: Mar 13, 2022
+Date: Mar 13, 2022.
 """
 
 
