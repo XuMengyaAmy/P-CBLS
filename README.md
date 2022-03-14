@@ -26,6 +26,7 @@ python main.py --mode CBLS --ls_factor 0.38 --use_cls --cls_decay 0.5 --num_epoc
 
 Other baselines including Cross-Entropy Loss (CE), Label Smoothing (LS), Online Label Smoothing (OLS) and Disturb Label (DL).
 
+
 CE
 ```
 python main.py --mode CE --num_epochs 200 --dataset tinyimagenet
