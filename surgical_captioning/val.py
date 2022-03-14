@@ -1,4 +1,3 @@
-
 import random
 from data import ImageDetectionsField, TextField, RawField
 from data import COCO, DataLoader
