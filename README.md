@@ -12,6 +12,8 @@ CIFAR-100 and CIFAR-100 Dataset (https://www.cs.toronto.edu/~kriz/cifar.html)
 
 Tiny-ImageNet Dataset (https://www.kaggle.com/c/tiny-imagenet)
 
+The detailed README files for each task can be found inside the corresponding code folder.
+
 ## Here, we take the training commands on Tiny-ImageNet as the example to demonstrate the usage of our approaches.
 ## Command to train models with CBLS approach on  Tiny-ImageNet:
 ```
@@ -23,6 +25,7 @@ python main.py --mode CBLS --ls_factor 0.38 --use_cls --cls_decay 0.5 --num_epoc
 ```
 
 Other baselines including Cross-Entropy Loss (CE), Label Smoothing (LS), Online Label Smoothing (OLS) and Disturb Label (DL).
+
 CE
 ```
 python main.py --mode CE --num_epochs 200 --dataset tinyimagenet
