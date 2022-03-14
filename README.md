@@ -2,7 +2,7 @@
 This repository contains the code for the paper "Confidence-Aware Paced-Curriculum Learning by Label Smoothing". 
 We evaluate our CBLS and P-CBLS on three common computer vision classification datasets: Tiny-ImageNet, CIFAR10, CIFAR100, and four surgical datasets includeing multi-class classification, multi-label classification, semantic segmentation, image captioning tasks.
 
-Here, we take the the training commands on Tiny-ImageNet as the example to demonstrate the usage of our appraoches.
+Here, we take the training commands on Tiny-ImageNet as the example to demonstrate the usage of our approaches.
 
 ## Command to train models with CBLS approach on  Tiny-ImageNet:
 Our CBLS:
