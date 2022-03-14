@@ -210,7 +210,7 @@ def main():
             loss = curriculum_CELossWithSVLS(num_classes = num_classes, ksize = args.ksize)
 
 
-    cudnn.benchmark = True
+    # cudnn.benchmark = True
 
     def make_loader(file_names, shuffle=False, transform=None, problem_type='binary', batch_size=1):
         return DataLoader(
